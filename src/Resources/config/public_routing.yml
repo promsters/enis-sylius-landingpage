@@ -1,0 +1,6 @@
+app_public_landingpage_10:
+    path: /hankook-zima-2018
+    controller: 'Enis\SyliusLandingPagePlugin\Controller\LandingPageController::show'
+app_public_landingpage_11:
+    path: /promocja-bridgestone-zima-2018
+    controller: 'Enis\SyliusLandingPagePlugin\Controller\LandingPageController::show'

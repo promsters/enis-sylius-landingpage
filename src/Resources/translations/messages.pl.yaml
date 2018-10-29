@@ -1,0 +1,19 @@
+
+app:
+  ui:
+    landingpages: 'Strony promocyjne'
+    new_landingpage: 'Tworzenie nowej strony promocyjnej'
+    edit_landingpage: 'Edycja strony promocyjnej'
+
+  form:
+    landingpage:
+      name: Nazwa
+      slug: Slug (ścieżka)
+      template: Szablon
+      template_info: Szablony muszą znajdować się w katalogu /templates/LandingPage/
+      starts_at: Data rozpoczęcia
+      ends_at: Data zakończenia
+
+sylius:
+  ui:
+    active: Aktywny

@@ -1,0 +1,14 @@
+app_admin_landingpage:
+  resource: |
+    alias: app.landingpage
+    section: admin
+    templates: SyliusAdminBundle:Crud
+    redirect: update
+    grid: app_admin_landingpage
+    vars:
+        all:
+          templates:
+            form: "@SyliusLandingPagePlugin/Resources/views/Form/_form.html.twig"
+        index:
+            icon: 'newspaper outline'
+  type: sylius.resource

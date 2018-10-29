@@ -1,0 +1,10 @@
+imports:
+  - { resource: "@SyliusLandingPagePlugin/Resources/config/grids/landingpage.yml" }
+
+sylius_resource:
+  resources:
+    app.landingpage:
+      driver: doctrine/orm # You can use also different driver here
+      classes:
+        model: Enis\SyliusLandingPagePlugin\Entity\LandingPage
+        form: Enis\SyliusLandingPagePlugin\Form\Type\LandingPageType

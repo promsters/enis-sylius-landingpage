@@ -1,0 +1,23 @@
+<div class="ui two column stackable grid">
+    <div class="column">
+        {{ form_errors(form) }}
+        <div class="ui segment">
+            <div class="two fields">
+                {{ form_row(form.name) }}
+                {{ form_row(form.slug) }}
+            </div>
+            {{ form_row(form.template) }}
+            <div class="ui ignored info message">
+                {{ 'app.form.landingpage.template_info'|trans }}
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <h4 class="ui dividing header">{{ 'sylius.ui.start_date'|trans }} & {{ 'sylius.ui.end_date'|trans }}</h4>
+
+        <div class="two fields">
+            {{ form_row(form.startsAt) }}
+            {{ form_row(form.endsAt) }}
+        </div>
+    </div>
+</div>

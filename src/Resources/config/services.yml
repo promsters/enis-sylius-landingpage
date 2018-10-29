@@ -1,0 +1,23 @@
+services:
+  app.listener.admin.menu_builder:
+    class: Enis\SyliusLandingPagePlugin\Menu\AdminMenuListener
+    tags:
+    - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+
+  app.landingpage.form.type:
+    class: Enis\SyliusLandingPagePlugin\Form\Type\LandingPageType
+    tags:
+    - { name: form.type }
+    arguments: ['%app.model.landingpage.class%', '@file_locator', []]
+
+  app.landingpage.listener:
+    class: Enis\SyliusLandingPagePlugin\EventListener\LandingPageCreateListener
+    arguments: ['@file_locator']
+    tags:
+      - { name: kernel.event_listener, event: app.landingpage.post_create, method: onLandingPageCreate}
+      - { name: kernel.event_listener, event: app.landingpage.post_update, method: onLandingPageCreate}
+      - { name: kernel.event_listener, event: app.landingpage.pre_delete, method: onLandingPageDelete}
+
+  Enis\SyliusLandingPagePlugin\Repository\LandingPageRepository:
+    tags: ['doctrine.repository_service']
+    autowire: true
