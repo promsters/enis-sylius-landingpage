@@ -60,7 +60,7 @@ final class LandingPageType extends AbstractResourceType
 
     public function test() {
         $finder = new Finder();
-        $path = $this->file_locator->locate('/app/templates/LandingPage/');
+        $path = $this->file_locator->locate('../templates/bundles/SyliusLandingPagePlugin/');
         $files = $finder->files()->name('*.html.twig')->depth('== 0')->in($path);
 
         $choice = [];

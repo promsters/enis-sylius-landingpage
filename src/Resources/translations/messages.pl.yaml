@@ -10,7 +10,7 @@ app:
       name: Nazwa
       slug: Slug (ścieżka)
       template: Szablon
-      template_info: Szablony muszą znajdować się w katalogu /templates/LandingPage/
+      template_info: Szablony muszą znajdować się w katalogu /templates/bundles/SyliusLandingPagePlugin/
       starts_at: Data rozpoczęcia
       ends_at: Data zakończenia
 
